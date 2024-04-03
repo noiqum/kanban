@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./store/provider";
+import Navbar from "./components/navbar/navbar";
 
 //font we'll use throughout the project
 const pjs = Plus_Jakarta_Sans({ subsets: ["latin"], display: "swap" });
@@ -22,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={pjs.className}>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
