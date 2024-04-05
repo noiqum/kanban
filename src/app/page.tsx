@@ -1,9 +1,11 @@
-import Image from "next/image";
+import Sidebar from "./components/sidebar/sidebar";
+import BoardTasks from "./components/boardtasks/boardtasks";
 
 export default function Home() {
   return (
-    <main>
-      <p>kanban</p>
+    <main className="flex h-full">
+      <Sidebar />
+      <BoardTasks />
     </main>
   );
 }
